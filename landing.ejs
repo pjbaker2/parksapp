@@ -1,0 +1,13 @@
+<%include partials/header.ejs%>
+
+<h2>National Park App Page </h2>
+    <h3>Parks I've Seen:</h3>
+    <form action="/parks" method="POST">
+        <p>Park Name: <input type="text" name = "name" placeholder = "Park Name"></p>
+        <p>Park Picture: <input type="text" name = "image" placeholder="Image URL"></p>
+        <a href="/parks"><button>Add to My Memories</button></a>
+       <!-- <input type="submit" value="Add to My Memories" ="/parks">-->
+    </form>
+
+
+<%include partials/footer.ejs%>

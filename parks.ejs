@@ -1,0 +1,13 @@
+<%include partials/header.ejs%>s
+
+<h2> The Parks I've Seen</h2>
+<div>
+  <%visited.forEach(function(park){%>
+    <%= park.name %>
+    <img style="height: 200px; width: 200px;" src="<%= park.image %>">
+ <%});%>
+</div>
+
+
+
+<%include partials/footer.ejs%>
