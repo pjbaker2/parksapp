@@ -9,29 +9,26 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 
 const visited = [
-  {name: "Salmon Creek", image: "https://www.nps.gov/zion/planyourvisit/images/South_CG_r_1.jpg?maxwidth=650&autorotate=false"}
+  {name: "Yosemite", image: "https://thenypost.files.wordpress.com/2018/10/yosemite-national-park.jpg?quality=90&strip=all&w=618&h=410&crop=1"}
 ]
 
-app.get("/", function(req,res){
+app.get("/", function(req, res){
    res.render("landing");
 });
 
-app.get("/parks", function(req,res){
+app.get("/parks", function(req, res){
     res.render("parks", {visited: visited})
 });
 
-app.post("/parks", function(req,res){
-   var name = req.body.name
-   var image = req.body.image
-   var newPark = {name: name, image: image}
+app.post("/parks", function(req, res){
+   var name = req.body.parkName;
+   var image = req.body.parkImage;
+   var newPark = {name: name, image: image};
    visited.push(newPark);
    res.redirect("/parks");
 });
 
 app.listen(port, function (){
-  if(err){
-    console.log("Error");
-  } else {
   console.log("Server running");
- }
+  console.log(visited);
 });
