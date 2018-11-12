@@ -1,10 +1,12 @@
 <%include partials/header.ejs%>
-
-<h2> The Parks I've Seen</h2>
-<div>
-  <% visited.forEach(function(campground){ %>
-    <img style="height: 200px; width: 200px;" src="<%= campground.image %>">
-    <p><%=campground.name %></p>
+<a href="/"><h1 style="margin-left: 50px; color: black;">Teddy's Travels</h1></a>
+<h2 style="margin-left: 50px;"> The Parks I've Seen</h2>
+<div class="container">
+  <% visited.forEach(function(park){ %>
+    <div class="column" style=" maring-left: 50px; margin-right: 50px; margin-bottom: 50px;">
+      <img style="height: 200px; width: 348px;" src="<%= park.image %>">
+      <p><b><%=park.name %></b></p>
+    </div>
   <%});%>
 </div>
 
