@@ -1,13 +1,14 @@
 <%include partials/header.ejs%>
-<div class="landingPage" style="text-align: center">
+<div class="jumbotron" style="text-align: center">
 <h1>Teddy's Travels </h1>
     <h2>Parks I've Seen:</h2>
     <form action="/parks" method="POST">
-        <p>Park Name: <input type="text" name = "parkName" placeholder = "Park Name"></p>
-        <p>Park Picture: <input type="text" name = "parkImage" placeholder="Image URL"></p>
-        <a href="/parks"><button>Add to My Memories</button></a>
-       <!-- <input type="submit" value="Add to My Memories" ="/parks">-->
-        <a href="/parks"><p style="color: black">My Parks</p></a>
+        <p>Park Name: <input type="text" class="form-control"  name = "parkName" placeholder = "Park Name"></p>
+        <p>Park Picture: <input type="text" class="form-control" name = "parkImage" placeholder="Image URL"></p>
+        <!-- <a href="/parks"><button type="button" class="btn btn-primary">Add to My Memories</button></a> -->
+        <input type="submit" class="btn btn-primary" value="Add to My Memories" src="/parks">
+        <br>
+        <a href="/parks"><button type="button" class="btn btn-link">My Parks</button></a>
     </form>
 </div>
 
