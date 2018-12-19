@@ -1,15 +1,16 @@
 <%include partials/header.ejs%>
+
 <a href="/"><h1 style="margin-left: 50px; color: black;">Teddy's Travels</h1></a>
-<h2 style="margin-left: 50px;"> The Parks I've Seen</h2>
+<h2 style="margin-left: 50px;">The Parks I've Seen</h2>
 <div class="container">
-  <% visited.forEach(function(park){ %>
-    <div class="row">
-        <div class="column" style=" marigin-left: 50px; margin-right: 50px; margin-bottom: 50px;">
-          <img class="parkPicture" style="height: 250px; width: 348px;" src="<%= park.image %>">
-          <p class ="markerFont"><b><%=park.name %></b></p>
+    <div class="row text-center">
+      <% visited.forEach(function(park){ %>
+        <div class="col-lg-4 col-sm-6">
+            <img src="<%= park.image %>" class="img-fluid" alt="Responsive image" style="width: 400px;">
+            <p class ="markerFont"><b><%=park.name %></b></p>
         </div>
+          <%});%>
     </div>
-  <%});%>
 </div>
 
 
